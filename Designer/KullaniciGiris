@@ -1,0 +1,149 @@
+namespace FligthReservationSystem
+{
+    partial class KullanıcıGiris
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        private void InitializeComponent()
+        {
+            GirisBtn = new Button();
+            lblUserName = new Label();
+            lblPassword = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            lblBaslik = new Label();
+            btnGeriDon = new Button();
+            btnKayitOl = new Button();
+            SuspendLayout();
+            
+            // GirisBtn 
+            GirisBtn.BackColor = Color.FromArgb(129, 92, 94);
+            GirisBtn.FlatAppearance.BorderSize = 0;
+            GirisBtn.FlatStyle = FlatStyle.Flat;
+            GirisBtn.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            GirisBtn.ForeColor = Color.White;
+            GirisBtn.Location = new Point(290, 290);
+            GirisBtn.Name = "GirisBtn";
+            GirisBtn.Size = new Size(280, 60);
+            GirisBtn.TabIndex = 3;
+            GirisBtn.Text = "✈️ GİRİŞ YAP";
+            GirisBtn.UseVisualStyleBackColor = false;
+            GirisBtn.Click += GirisBtn_Click;
+         
+            // lblUserName 
+            lblUserName.AutoSize = true;
+            lblUserName.Font = new Font("Segoe UI", 13F);
+            lblUserName.ForeColor = Color.FromArgb(44, 29, 33);
+            lblUserName.Location = new Point(197, 141);
+            lblUserName.Name = "lblUserName";
+            lblUserName.Size = new Size(64, 30);
+            lblUserName.TabIndex = 7;
+            lblUserName.Text = "Email";
+           
+            // lblPassword 
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Segoe UI", 13F);
+            lblPassword.ForeColor = Color.FromArgb(44, 29, 33);
+            lblPassword.Location = new Point(197, 207);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(57, 30);
+            lblPassword.TabIndex = 8;
+            lblPassword.Text = "Şifre";
+           
+            // textBox1
+            textBox1.Location = new Point(340, 207);
+            textBox1.Name = "textBox1";
+            textBox1.PasswordChar = '*';
+            textBox1.Size = new Size(230, 27);
+            textBox1.TabIndex = 2;
+            
+            // textBox2 
+            textBox2.Font = new Font("Segoe UI", 12F);
+            textBox2.Location = new Point(340, 137);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(230, 34);
+            textBox2.TabIndex = 1;
+             
+            // lblBaslik 
+            lblBaslik.Anchor = AnchorStyles.Top;
+            lblBaslik.AutoSize = true;
+            lblBaslik.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblBaslik.ForeColor = Color.FromArgb(44, 29, 33);
+            lblBaslik.Location = new Point(260, 40);
+            lblBaslik.Name = "lblBaslik";
+            lblBaslik.Size = new Size(270, 41);
+            lblBaslik.TabIndex = 6;
+            lblBaslik.Text = "KULLANICI GİRİŞİ";
+            lblBaslik.TextAlign = ContentAlignment.MiddleCenter;
+        
+            // btnGeriDon
+            btnGeriDon.BackColor = Color.FromArgb(73, 51, 57);
+            btnGeriDon.FlatAppearance.BorderSize = 0;
+            btnGeriDon.FlatStyle = FlatStyle.Flat;
+            btnGeriDon.Font = new Font("Segoe UI", 10F);
+            btnGeriDon.ForeColor = Color.WhiteSmoke;
+            btnGeriDon.Location = new Point(20, 20);
+            btnGeriDon.Name = "btnGeriDon";
+            btnGeriDon.Size = new Size(120, 35);
+            btnGeriDon.TabIndex = 5;
+            btnGeriDon.Text = "← Geri Dön";
+            btnGeriDon.UseVisualStyleBackColor = false;
+            btnGeriDon.Click += btnGeriDon_Click;
+            
+            // btnKayitOl
+            btnKayitOl.BackColor = Color.Transparent;
+            btnKayitOl.FlatAppearance.BorderSize = 0;
+            btnKayitOl.FlatStyle = FlatStyle.Flat;
+            btnKayitOl.Font = new Font("Segoe UI", 10F, FontStyle.Underline);
+            btnKayitOl.ForeColor = Color.FromArgb(93, 61, 63);
+            btnKayitOl.Location = new Point(340, 360);
+            btnKayitOl.Name = "btnKayitOl";
+            btnKayitOl.Size = new Size(180, 35);
+            btnKayitOl.TabIndex = 4;
+            btnKayitOl.Text = "Hesabınız yok mu? Kayıt Ol";
+            btnKayitOl.UseVisualStyleBackColor = false;
+            btnKayitOl.Click += btnKayitOl_Click;
+             
+            // KullanıcıGiris 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(245, 231, 235);
+            ClientSize = new Size(800, 480);
+            Controls.Add(btnKayitOl);
+            Controls.Add(btnGeriDon);
+            Controls.Add(lblBaslik);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(lblPassword);
+            Controls.Add(lblUserName);
+            Controls.Add(GirisBtn);
+            Name = "KullanıcıGiris";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Kullanıcı Girişi";
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button GirisBtn;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblBaslik;
+        private System.Windows.Forms.Button btnGeriDon;
+        private System.Windows.Forms.Button btnKayitOl;
+    }
+}
