@@ -1,0 +1,92 @@
+using System.Windows.Forms;
+ 
+using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace FligthReservationSystem
+{
+    public partial class KullanıcıGiris : Form
+    {
+        public KullanıcıGiris()
+        {
+            InitializeComponent();
+            textBox1.PasswordChar = '*';
+        }
+
+        // giris yap kısmı 
+        private void GirisBtn_Click(object sender, EventArgs e)
+        {
+            string kullaniciAdiVeyaEmail = textBox2.Text;
+            string sifre = textBox1.Text;
+
+            // baglantı adresi
+            string baglantiAdresi = @"Server=(localdb)\MSSQLLocalDB;Database=UcakSistemDB;Integrated Security=True";
+
+            // veritabanı baglantı kuarar ve gırıs bılgılerını kontrol eder
+            using (SqlConnection baglanti = new SqlConnection(baglantiAdresi))
+            {
+                try
+                {
+                    baglanti.Open();
+
+                    
+                    
+                    string sorgu = "SELECT Id, AdSoyad, Rol FROM Kullanicilar WHERE Email=@p1 AND Sifre=@p2";
+
+                    SqlCommand komut = new SqlCommand(sorgu, baglanti);
+                    komut.Parameters.AddWithValue("@p1", kullaniciAdiVeyaEmail);
+                    komut.Parameters.AddWithValue("@p2", sifre);
+
+                    SqlDataReader okuyucu = komut.ExecuteReader();
+                     
+                 
+                    if (okuyucu.Read())
+                    {
+                        
+                        int aktifId = Convert.ToInt32(okuyucu["Id"]);
+                        string adSoyad = okuyucu["AdSoyad"].ToString();
+                        string rol = okuyucu["Rol"].ToString();
+
+                        if (rol == "Musteri")
+                        {
+                            MessageBox.Show("Giriş Başarılı! Hoşgeldiniz " + adSoyad);
+                            this.Hide();
+
+                            MüsteriAnaMenü musteriMenu = new MüsteriAnaMenü (aktifId);
+                            musteriMenu.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hata: Bu ekrandan sadece Müşteriler giriş yapabilir!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hatalı Kullanıcı Adı veya Şifre!");
+                    }
+                }
+                catch (Exception hata)
+                {
+                    MessageBox.Show("Veritabanı Bağlantı Hatası: " + hata.Message);
+                }
+            }
+        }
+
+        // gri don butonu  
+        private void btnGeriDon_Click(object sender, EventArgs e)
+        {
+            this.Close();
+       
+            GirisSecimFormu anaMenu = new GirisSecimFormu();
+            anaMenu.Show();
+        }
+
+        // kayıt ol butonu
+        private void btnKayitOl_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            KayıtOl kayitForm = new KayıtOl();
+            kayitForm.Show();
+        }
+    }
+}
