@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="AdminAnaMenü.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GirisSecimFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="KayıtOl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="KullanıcıGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MevcutRezervasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RezervasyonYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Rezervasyonİptal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="KullanıcıGöster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UcusAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MüsteriAnaMenü.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UcusEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UcusGüncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UcusSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
